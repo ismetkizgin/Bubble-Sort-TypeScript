@@ -1,4 +1,4 @@
-function BubbleSort(array: number[]) {
+function BubbleSort(array: Array<number>) {
     let len: number = array.length;
     for (let i: number = 0; i < len; i++) {
         for (let j: number = 0; j < len; j++) {
@@ -12,11 +12,11 @@ function BubbleSort(array: number[]) {
     return array;
 }
 
-let rndNumberArray: number[] = new Array(10);
+let rndNumberArray: Array<number> = [];
 
-for (let index: number = 0; index < 10; index++) {
+for (let index: number = 0; index < 10; index++)
     rndNumberArray[index] = Math.floor((Math.random() * 1000) + 1)
-}
+
 console.log(`\nRandom Number Array List: ${rndNumberArray} \n`);
 
 console.log(`Array Sorting List: ${BubbleSort(rndNumberArray)}\n`);
